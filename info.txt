@@ -1,0 +1,5 @@
+
+
+    Макет сайта был создан в программе Figma. 
+
+    На сайте присутствует JavaScript, Jquerry, Bootstrap, SlickSlider.
