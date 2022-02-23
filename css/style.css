@@ -1,0 +1,964 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%; font-family: Arail, sans-serif;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+
+/*Шрифты, технические классы и повторяющиеся блоки------------------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&subset=cyrillic-ext');
+
+
+body{
+	font-family: Arial, sans-serif;
+}
+
+
+._container{
+	max-width: 1145px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.wrapper{
+	min-width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.ibg{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.ibg img{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+.header-block {
+	text-align: center;
+	margin-bottom: 65px;
+}
+.header-block__title {
+	font-size: 36px;
+	margin-bottom: 28px;
+}
+.header-block__title span{
+	font-weight: bold;
+}
+.header-block__line {
+	margin: 0 auto;
+	width: 70px;
+	height: 2px;
+	background-color: #aaaaaa;
+}
+
+
+
+
+
+
+/*Шапка Авто-Сервиса------------------------------------------------------------------------------------------------------------------------*/
+
+.header__page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: white;
+	z-index: 5;
+}
+.header__top {
+	background: #274fa4;
+}
+.header__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.header__col {}
+.header__item {}
+.item {}
+.item__contacts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+}
+.item__contacts ion-icon{
+	color: white;
+	padding-right: 6px;
+}
+.item__address {
+	padding: 16px 30px 16px 0px;
+}
+.item__tel {
+	background: #2e3967;
+	padding: 16px 30px 16px 20px;
+}
+.item__soicals {
+	display: flex;
+	justify-content: center;
+}
+.item__social {
+	padding: 14px 15px;
+	border: 1px solid #1a418e;
+	height: 100%;
+}
+
+
+.item__social a{
+	color: white;
+	font-size: 15px;
+}
+
+@media(max-width: 768px){
+	.header__row{
+		justify-content: center;
+		padding: 10px 0;
+	}
+	.header__row > *:not(:last-child){
+		margin-bottom: 10px;
+	}
+	.item__contacts{
+		flex-wrap: wrap;
+	}
+	.item__address{
+		padding: 3px 10px;
+	}
+	.item__tel{
+		background: none;
+		padding: 3px 10px;
+	}
+	.item__social{
+		border: none;
+		padding: 0 17px;
+	}
+	.header__col{
+		flex: 1 0 100%;
+		text-align: center;
+	}
+
+}
+
+
+.header__bottom {
+	
+}
+.header-bottom__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header-bottom__col {}
+.header-bottom__logo {}
+.header-bottom__menu {
+	display: flex;
+	align-items: center;
+}
+.menu {}
+.menu__body {
+	display: flex;
+}
+.menu__body > *:not(:last-child){
+	margin-right: 40px;
+}
+.menu__item {
+	position: relative;
+	padding: 45px 5px;
+	transition: all 0.3s ease;
+}
+.menu__item.lined{
+	border-bottom: 2px solid white;
+
+}
+
+.menu__item:hover{
+	border-bottom: 2px solid white;
+	transition: all 0.3s ease;
+}
+
+.menu__link {
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+}
+.header-bottom__button a{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	min-height: 40px;
+	padding: 5px 20px;
+	background: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	transition: all 0.3s ease;
+}
+
+.header-bottom__button a:hover{
+	background: #2e3967;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+.menu__icon {
+	display: none;
+	position: relative;
+	width: 30px;
+	height: 20px;
+	transition: all 0.3s ease;
+}
+
+ 
+.menu__icon span:first-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+	transition: all 0.3s ease;
+}
+
+.menu__icon span{
+	position: absolute;
+	bottom: 45%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+}
+
+.menu__icon span:last-child{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+	transition: all 0.3s ease;
+}
+
+
+
+@media(max-width: 1019px){
+	.menu__body > *:not(:last-child){
+	margin-right: 20px;
+}
+}
+
+@media(max-width: 893px){
+	.header-bottom__row .header-bottom__col:last-child{
+		display: none;
+	}
+
+	
+}
+
+@media(max-width: 768px){
+	.menu__icon{
+		display: block;
+	}
+	.header-bottom__container{
+		padding: 0 40px;
+	}
+	.header-bottom__row{
+		padding-top: 10px;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+	}
+	.header-bottom__col{
+		flex: 1 0 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.header-bottom__row > .header-bottom__col:first-child{
+		order: 1;
+		justify-content: flex-start;
+		margin-bottom: 10px;
+	}
+	.header-bottom__row > .header-bottom__col:nth-child(2){
+		order: 3;
+		flex: 1 0 100%;
+		transform: scale(0);
+		height: 0;
+	}
+	.header-bottom__row > .header-bottom__col:nth-child(3){
+		order: 2;
+		justify-content: flex-end;
+	}
+
+	.header-bottom__menu{
+		width: 100%;
+	}
+
+	.header-bottom__row > .header-bottom__col:nth-child(2)._active{
+		transform: scale(1);
+		height: 100%;
+		padding-bottom: 30px;
+	}
+
+	.menu__body{
+		background: #151515;
+		flex-direction: column;
+		padding: 0;
+		margin: 20px 0 0 0;
+		width: 100%;
+		transition: all 0.3s ease;
+		transform: scale(0);
+	}
+	.menu__item.lined{
+		border: none;
+	}
+	.menu__body .menu__item{
+		padding: 20px 5px 20px 50px;
+		border: none;
+		margin-right: 0;
+		text-align: left;
+	}
+	.menu__item{
+
+	}
+	.menu__item a.menu__link{
+		display: block;
+		width: 100%;
+	}
+
+	.menu__body._active{
+		height: 100%;
+		transition: all 0.3s ease;
+		transform: scale(1);
+	}
+
+}
+
+.menu__icon._active span:first-child{
+	top: 50%;
+	transform: rotate(-135deg);
+	transition: all 0.3s ease;
+}
+.menu__icon._active span:nth-child(2){
+	display: none;
+}
+.menu__icon._active span:last-child{
+	top: 50%;
+	transform: rotate(135deg);
+	transition: all 0.3s ease;
+}
+
+@media(max-width: 541px){
+	.header-bottom__row > .header-bottom__col:first-child{
+		flex: 0 0 80%;
+	}
+	.header-bottom__row > .header-bottom__col:nth-child(3){
+		flex: 0 0 20%;
+	}
+}
+
+@media(max-width: 400px){
+	.header-bottom__row > .header-bottom__col:first-child{
+		
+	}
+	.header-bottom__row > .header-bottom__col:nth-child(3){
+		
+	}
+}
+
+
+@media(max-width: 390px){
+
+	.header-bottom__container{
+		padding: 0 10px;
+	}
+}
+
+
+/*Главный экран Авто-Сервиса------------------------------------------------------------------------------------------------------------------------*/
+
+
+.main-screen {
+	padding: 300px 0 230px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.main-screen__container {}
+._container {}
+.main-screen__body {
+		z-index: 4;
+}
+.main-screen__offer {
+	max-width: 750px;
+}
+.main-screen__offer > *:not(:last-child){
+	margin-bottom: 40px;
+	color: white;
+}
+.offer-main-screen {}
+.offer-main-screen__title {
+	font-family: Montserrat, sans-serif;
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: capitalize;
+	line-height: 130%;
+}
+.offer-main-screen__subtitle {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 150%;
+}
+.offer-main-screen__button a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 50px;
+	padding: 5px 30px;
+	background: white;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	transition: all 0.3s ease;
+}
+.offer-main-screen__button a:hover{
+	color: white;
+	background: #2e3967;
+	transition: all 0.3s ease;
+
+}
+.offer-main-screen__button a span{
+	padding-right: 10px;
+}
+.main-screen__bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+@media(max-width: 747px){
+	.main-screen__offer{
+		max-width: 600px;
+	}
+	.offer-main-screen__title{
+		font-size: 40px;
+	}
+	.offer-main-screen__subtitle{
+		font-size: 18px;
+	}
+	.main-screen__offer > *:not(:last-child){
+		margin-bottom: 30px;
+	}
+	.main-screen{
+		padding: 250px 0 190px 0
+	}
+}
+
+@media(max-width: 535px){
+	.main-screen__offer{
+		width: 100%;
+
+	}
+	.main-screen__offer > *:not(:last-child){
+		margin-bottom: 25px;
+		text-align: center;
+	}	
+	.offer-main-screen__button {
+		text-align: center;
+	}
+	.offer-main-screen__title{
+		font-size: 30px;
+	}
+	.offer-main-screen__subtitle{
+		font-size: 18px;
+	}
+}
+
+
+
+/*Контактная форма Авто-Сервиса------------------------------------------------------------------------------------------------------------------------*/
+
+.contact__page {
+	z-index: 10;
+	margin-top: -70px;
+	text-align: center;
+}
+.contact {}
+.contact__container {}
+._container {}
+.contact__body {
+	padding: 60px 40px;
+	background: white;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);
+	display: inline-block;
+	text-align: center;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.contact__body > *:not(:last-child){
+	margin-bottom: 40px;
+}
+.contact__title {
+	font-size: 36px;
+}
+.contact__title span{
+	font-weight: bold;
+}
+.contact__form {
+	display: flex;
+	width: 100%;
+}
+.contact__form > *{
+	margin: 0 5px;
+}
+.contact__input {
+	border: 1px solid #f1f1f1;
+	min-height: 50px;
+	padding-left: 20px;
+}
+.contact__button {
+	background: #274fa4;
+	color: white;
+	padding: 5px 30px;
+	text-transform: uppercase;
+}
+
+.contact__button a {
+}
+.contact__subtitle {
+	font-size: 16px;
+}
+.contact__subtitle span{
+	font-weight: bold;
+}
+
+
+@media(max-width: 768px){
+	.contact__body{
+		display: flex;
+	}
+	.contact__form{
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.contact__form > *:not(:last-child){
+		margin-bottom: 10px;
+	}
+	.contact__button{
+		min-height: 50px;
+		justify-content: center;
+	}
+}
+
+
+/*Почему мы - Авто-Сервиса------------------------------------------------------------------------------------------------------------------------*/
+
+
+.page__whyus {
+	padding: 100px 0 75px 0;
+}
+.whyus__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.whyus__col {
+	flex: 1 0 33.333%;
+}
+.whyus__item {
+	padding: 50px 5px 30px 5px;
+	color: white;
+	background: #2e3967;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.whyus__item:hover {
+	background: #274fa4;
+	transition: all 0.3s ease;
+}
+
+.whyus__item.tall{
+	padding: 66px 5px 60px 5px;
+	background: #274fa4;
+}
+.item-whyus {}
+.item-whyus__icon {
+	margin-bottom: 30px;
+}
+.item-whyus__title {
+	font-size: 18px;
+	font-weight: bold;
+}
+.item-whyus__title:not(:last-child){
+	margin-bottom: 25px;
+}
+.item-whyus__subtitle {
+	line-height: 140%;
+	max-width: 230px;
+}
+.item-whyus__subtitle:not(:last-child){
+		margin-bottom: 45px;
+}
+
+.item-whyus__button {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	min-height: 50px;
+	padding: 5px 32px;
+	background: #2e3967;
+	color: rgba(0,0,0,0);
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+
+.whyus__item.tall .item-whyus__button{
+	color: white;
+}
+.whyus__item:hover .item-whyus__button{
+	color: white;
+}
+
+
+.whyus__item:hover .item-whyus__button:hover{
+	background: white;
+	color: #000;
+	transition: all 0.3s ease;
+}
+
+
+@media(max-width: 1024px){
+	.whyus__row{
+		flex-direction: column;
+	}
+	.whyus__col{
+		flex: 1 0 100%;
+		width: 100%;
+	}
+	.item-whyus__subtitle{
+		max-width: 100%;
+	}
+}
+
+
+
+.whyus__row2 {
+	display: flex;
+}
+
+.whyus__col2 {
+	flex: 1 0 50%;
+	padding: 0 15px;
+}
+.whyus__item2 {
+	position: relative;
+	padding: 115px 0 70px 0;
+	height: 100%;
+	color: white;
+}
+
+.item2-whyus__floating-img.man{
+	position: absolute;
+	bottom: 20px;
+	left: -10px;
+}
+.item2-whyus__floating-img.wheel{
+	position: absolute;
+	bottom: 0px;
+	right: -30px;
+}
+
+.whyus__row2 .whyus__col2:first-child .whyus__item2{
+	padding: 115px 20px 70px 300px;
+}
+.whyus__row2 .whyus__col2:last-child .whyus__item2{
+	padding: 115px 245px 70px 40px;
+}
+.item2-whyus__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.item2-whyus__body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.item2-whyus__body > *:not(:last-child){
+	margin-bottom: 35px;	
+}
+
+.item2-whyus__text > *:not(:last-child){
+	margin-bottom: 35px;
+}
+
+.item2-whyus__title {
+	font-size: 36px;
+}
+.item2-whyus__subtitle {
+	font-size: 16px;
+	max-width: 540px;
+	line-height: 140%;
+}
+
+.item2-whyus__text{
+	flex: 1 0 100%;
+}
+.item2-whyus__button {
+	display: inline-flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	min-height: 50px;
+	padding: 5px 30px;
+	background: #274fa4;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;	
+	transition: all 0.3s ease;
+}
+
+.item2-whyus__button:hover	{
+	background: white;
+	color: #000;
+	transition: all 0.3s ease;
+}
+
+@media(max-width: 1024px){
+	.item2-whyus__floating-img{
+		display: none;
+	}
+	.whyus__row2 .whyus__col2:first-child .whyus__item2{
+		padding: 115px 20px 70px 40px;
+	}
+	.whyus__row2 .whyus__col2:last-child .whyus__item2{
+		padding: 115px 40px 70px 40px;
+	}
+}
+
+
+@media(max-width: 768px){
+	.whyus__row2{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.whyus__row2 > *:not(:last-child){
+		margin-bottom: 30px;
+	}
+}
+
+
+@media(max-width: 425px){
+	.item2-whyus__body > *:not(:last-child){
+		margin-bottom: 25px;	
+	}
+
+	.item2-whyus__text > *:not(:last-child){
+		margin-bottom: 25px;
+	}
+
+	.item2-whyus__title{
+		font-size: 30px;
+	}
+	.item2-whyus__subtitle{
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 375px){
+	.item2-whyus__title{
+		font-size: 25px;
+	}
+	.item2-whyus__subtitle{
+		font-size: 15px;
+	}
+}
+
+
+
+/*Как мы работаем - Авто-Сервиса------------------------------------------------------------------------------------------------------------------------*/
+
+.page__howwework {
+	padding: 100px 0 115px 0;
+}
+.howwework {}
+
+.howwework__row {
+	display: flex;
+	margin: 0 -40px;
+}
+.howwework__col {
+	flex: 0 0 33.333%;
+	padding: 0 40px;
+}
+.howwework__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+
+
+.item-howwework {}
+.item-howwework__icon {
+	margin-bottom: 40px;
+}
+.item-howwework__title {
+	color: #295095;
+	font-size: 20px;
+}
+.item-howwework__title:not(:last-child){
+	margin-bottom: 20px;
+}
+.item-howwework__subtitle {
+	max-width: 290px;
+	line-height: 140%;
+	color: #666666;
+	font-size: 16px;
+}
+
+@media(max-width: 973px){
+	.howwework__row{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.howwework__row > *:not(:last-child){
+		margin-bottom: 30px;
+	}
+	.howwework__col{
+		flex: 0 0 50%;
+	}
+}
+
+@media(max-width: 646px){
+	.howwework__col{
+		flex: 1 0 100%;
+	}
+}
+
+
+
+/*Что мы предоставляем - Авто-Сервиса------------------------------------------------------------------------------------------------------------------------*/
+
+
+.page__weprovide {
+	padding: 0 0 70px 0;
+}
+
+.weprovide__row {
+	display: flex;
+	align-items: stretch;
+	margin: 0 -30px;
+	flex-wrap: wrap;
+}
+.weprovide__col {
+	flex: 1 0 33.333%;
+	padding: 0 30px;
+	margin-bottom: 30px;
+}
+.weprovide__item {
+	background: white;
+	height: 100%;
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #dddddd;
+}
+
+.item-weprovide__image img{
+	object-position: top;
+}
+
+
+.weprovide__item a{
+	color: #000;
+}
+.item-weprovide__text{
+	padding: 40px 0 35px 30px;
+}
+.item-weprovide {}
+.item-weprovide__image {
+	padding-bottom: 71.72%;
+	transition: all 0.3s ease;
+}
+.item-weprovide__label {
+	text-transform: uppercase;
+	color: #ababab;
+}
+.item-weprovide__label:not(:last-child){
+	margin-bottom: 10px;
+}
+.item-weprovide__title {
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.item-weprovide__title:not(:last-child){
+	margin-bottom: 20px;
+}
+.item-weprovide__button {
+	text-transform: uppercase;
+	color: #000;
+}
+.item-weprovide__button:not(:last-child){
+	margin-top: 20px;
+}
+.item-weprovide__button span{
+	padding-right: 10px;
+}
+
+
+@media(max-width: 973px){
+	.weprovide__item{
+		min-width: 250px;
+	}
+}
